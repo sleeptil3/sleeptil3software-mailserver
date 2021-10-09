@@ -39,10 +39,6 @@ transporter.verify((reject, resolve) => reject ? console.error('REJECTED\n\n', r
 // EXPRESS MIDDLEWARE
 app.use(express.json());
 app.use(cors());
-app.use((req, res, next) => {
-	console.log('MIDDLEWARE LOG (REQ BODY)', req.body)
-	next()
-})
 
 // ROUTES
 app.use('/', router);
@@ -90,8 +86,6 @@ router.post('/send', (req, res, next) => {
 		html: html
 	}
 
-	console.log(message)
-
 	transporter.sendMail(message, (error, info) => {
 		if (error) {
 			res.json({
@@ -109,4 +103,4 @@ router.post('/send', (req, res, next) => {
 
 // LISTENER
 
-app.listen(PORT, () => console.log('LISTENING ON PORT:', PORT))
+app.listen(PORT)
