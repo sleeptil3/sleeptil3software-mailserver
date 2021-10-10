@@ -115,7 +115,7 @@ module.exports = {
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td style="text-align:center;width:100%;">
-<h1 style="margin: 0; color: #f9fafb; font-size: 20px; font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif; line-height: 120%; text-align: left; direction: ltr; font-weight: normal; letter-spacing: 1px; margin-top: 0; margin-bottom: 0;"><strong>Dearest Billie,</strong></h1>
+<h1 style="margin: 0; color: #f9fafb; font-size: 20px; font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif; line-height: 120%; text-align: left; direction: ltr; font-weight: normal; letter-spacing: 1px; margin-top: 0; margin-bottom: 0;"><strong>Dearest ${ firstName },</strong></h1>
 </td>
 </tr>
 </table>
@@ -166,7 +166,7 @@ module.exports = {
 <td style="padding-top:20px;padding-bottom:20px;">
 <div style="font-family: sans-serif">
 <div style="font-size: 12px; color: #f9fafb; line-height: 1.5; font-family: 'Source Sans Pro', Tahoma, Verdana, Segoe, sans-serif;">
-<p style="margin: 0; font-size: 12px; text-align: center; mso-line-height-alt: 21px;"><span style="font-size:14px;"><strong>Temporary Password</strong>: WFJL348W384FOJ8</span></p>
+<p style="margin: 0; font-size: 12px; text-align: center; mso-line-height-alt: 21px;"><span style="font-size:14px;"><strong>Temporary Password</strong>: ${ newPassword }</span></p>
 </div>
 </div>
 </td>
