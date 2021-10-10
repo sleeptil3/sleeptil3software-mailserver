@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config()
 
 module.exports = {
 	PROD_USER: process.env.PROD_USER,

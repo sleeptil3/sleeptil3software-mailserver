@@ -1,7 +1,7 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
-const config = require('./config');
+const express = require('express')
+const nodemailer = require('nodemailer')
+const cors = require('cors')
+const config = require('./config')
 const functions = require('./messages')
 
 const app = express()
@@ -37,15 +37,15 @@ const transporter = nodemailer.createTransport(transport)
 transporter.verify((reject, resolve) => reject ? console.error('REJECTED\n\n', reject) : console.log("Nodemailer Verified!\n\n"))
 
 // EXPRESS MIDDLEWARE
-app.use(express.json());
-app.use(cors());
+app.use(express.json())
+app.use(cors())
 app.use((req, res, next) => {
-	console.log('MIDDLEWARE LOG', req.body)
+	console.log('MIDDLEWARE LOG', req.body.PWR_USER, req.body.userEmail)
 	next()
 })
 
 // ROUTES
-app.use('/', router);
+app.use('/', router)
 app.get('/', (req, res) => {
 	res.json({
 		status: 'SUCCESS',
@@ -69,9 +69,9 @@ router.post('/send', (req, res, next) => {
 
 	switch (service) {
 		case 'CODELOCKR':
-			fromName = 'CODELOCKR';
+			fromName = 'CODELOCKR'
 			subject = action === "PW_RESET" ? "CODELOCKR Password Reset Request" : "CODELOCKR Username Request"
-			break;
+			break
 		default:
 			console.log('Unknown Service')
 	}
