@@ -39,6 +39,10 @@ transporter.verify((reject, resolve) => reject ? console.error('REJECTED\n\n', r
 // EXPRESS MIDDLEWARE
 app.use(express.json());
 app.use(cors());
+app.use((req, res, next) => {
+	console.log('MIDDLEWARE LOG', req.body)
+	next()
+})
 
 // ROUTES
 app.use('/', router);
