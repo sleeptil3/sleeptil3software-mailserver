@@ -131,7 +131,7 @@ __metadata:
     cors: ^2.8.5
     dotenv: ^10.0.0
     express: ^4.17.1
-    nodemailer: ^6.6.5
+    nodemailer: ^6.7.2
   languageName: unknown
   linkType: soft
 
@@ -346,10 +346,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:^6.6.5":
-  version: 6.6.5
-  resolution: "nodemailer@npm:6.6.5"
-  checksum: 17daaeced44e6cdf53527018986ed090e950448fbef89608220a236e1d3e081e76eb8264edbdf8b7bd5d26f096fb86044576015b5000c59dc83f3712282c46da
+"nodemailer@npm:^6.7.2":
+  version: 6.7.2
+  resolution: "nodemailer@npm:6.7.2"
+  checksum: 3c37a40928448e2f5118a9f2f016c7a4f32228d0e6b7cc7d1834b8001374cc77280dc077a83239420f6daea4c898d9a1f336dfc2273bb7eddaf51a36bd126f72
   languageName: node
   linkType: hard
 
