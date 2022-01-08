@@ -15,7 +15,7 @@ const { plainCodelockr, htmlCodelockr } = functions;
 // PROD - Gmail
 const transport = {
   host: "smtp.gmail.com",
-  port: 465,
+  port: 587,
   auth: {
     user: PROD_USER,
     pass: PROD_PASS,
