@@ -9,6 +9,7 @@ const router = express.Router();
 const PORT = process.env.PORT || 8088;
 const { DEV_USER, DEV_PASS, PROD_USER, PROD_PASS } = config;
 const { plainCodelockr, htmlCodelockr } = functions;
+
 // NODEMAIL MIDDLEWARE
 
 // PROD - Gmail
@@ -21,7 +22,7 @@ const transport = {
   },
 };
 
-// DEV - Nodemailer
+// DEV - Mailtrap Receiver
 // const transport = {
 // 	host: "smtp.mailtrap.io",
 // 	port: 2525,
@@ -53,6 +54,7 @@ app.use((req, res, next) => {
 
 // ROUTES
 app.use("/", router);
+
 app.get("/", (req, res) => {
   res.json({
     status: "SUCCESS",
@@ -61,7 +63,6 @@ app.get("/", (req, res) => {
 });
 
 router.post("/send", (req, res, next) => {
-  console.log(req.body);
   const service = req.body.service;
   const action = req.body.action;
   const firstName = req.body.firstName;
